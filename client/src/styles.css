@@ -1,0 +1,290 @@
+/* Genel Ayarlar */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Genel Container ve Dashboard Ayarları */
+.container, .dashboard-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 70vw;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Başlıklar */
+h1, h2 {
+  color: #4a90e2;
+  margin-bottom: 20px;
+}
+
+/* İkonlar ve Listeler */
+.icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+}
+
+.icon-dietitian {
+  background-image: url('/images/dietitian-icon.png');
+}
+
+.icon-client {
+  background-image: url('/images/client-icon.png');
+}
+
+.icon-diet-plan {
+  background-image: url('/images/diet-plan-icon.png');
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 12px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+}
+
+li:hover {
+  background-color: #e6f7ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+li i {
+  margin-right: 10px;
+  color: #4a90e2;
+}
+
+/* Input ve Butonlar */
+input {
+  margin-bottom: 15px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+button {
+  padding: 15px 25px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: #357ab7;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Form Toggle ve İçerik */
+.form-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.form-toggle button {
+  margin: 0 5px;
+}
+
+.form-toggle .active {
+  background-color: #4a90e2;
+}
+
+/* Form için Arka Plan Resmi */
+.form-container {
+  margin-top: 20px;
+  padding: 40px;
+  /* background-image: url('/images/background-icon.png'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Bildirimler ve Form Container */
+.notification {
+  background-color: #d9f7be;
+  color: #389e0d;
+  padding: 10px;
+  border: 1px solid #b7eb8f;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.register-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f3f4f6;
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Dashboard ve Sidebar */
+.dashboard-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.sidebar {
+  flex: 0 0 250px;
+  background-color: #edf2fb;
+  border-right: 1px solid #dee2e6;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  color: #0070f3;
+  font-weight: bold;
+}
+
+.sidebar li:hover {
+  background-color: #e6f7ff;
+}
+
+/* İçerik Bölümü */
+.content {
+  flex-grow: 1;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+}
+
+/* Kart Stilleri */
+.card {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.card i {
+  margin-right: 10px;
+}
+
+.card:hover {
+  background-color: #e6f7ff;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.1);
+}
+
+/* Duyarlı Tasarım */
+@media (max-width: 768px) {
+  .container, .dashboard-container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .content {
+    padding: 30px 15px;
+    margin-left: 0;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.entity-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.entity-table th, .entity-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.entity-table th {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.entity-table tr:hover {
+  background-color: #ddd;
+}
